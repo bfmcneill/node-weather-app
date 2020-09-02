@@ -1,6 +1,7 @@
 # Full stack app for finding your current weather
 
 ![Image of app](./weather-app.png)
+View live demo: [https://mcneill-weather-app.herokuapp.com/](https://mcneill-weather-app.herokuapp.com/)
 
 ## install packages
 
