@@ -1,5 +1,6 @@
 # Full stack app for finding your current weather
 
+![Image of app](./weather-app.png)
 
 ## how to start the app locally
 
