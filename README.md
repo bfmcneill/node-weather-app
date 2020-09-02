@@ -2,39 +2,25 @@
 
 ![Image of app](./weather-app.png)
 
-## how to start the app locally
+## install packages
 
 ```javascript
 npm install
-nodemon ./src/server.js -e js,hbs
 ```
 
 - `e` extensions to monitor
 
-## create ssh key for source control
+
+## sign up for mapbox.com account
+
+- place your api key in `.env` in the layout of `.env.template`
+
+## sign up for weatherstack.com account
+
+- place your api key in `.env` in the layout of `.env.template`
+
+## start app locally
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "email.com"
-```
-
-- `t` algorithm
-- `b` bits
-- `C` comment
-
-## prints out if the ssh-agent is running
-
-```bash
-eval "$(ssh-agent -s)"
-```
-
-## add the key to active use with the agent
-
-```bash
-ssh-add -K ~/.ssh/id_rsa
-```
-
-## test if github will authenticate with your ssh key
-
-```bash
-ssh -T git@github.com
+nodemon ./src/server.js -e js,hbs
 ```
