@@ -1,11 +1,15 @@
-# Web Server
+# Full stack app for finding your current weather
 
 
-## how to start the app for development
+## how to start the app locally
 
 ```javascript
 nodemon ./src/server.js -e js,hbs
 ```
+
+- `e` extensions to monitor
+
+## create ssh key for source control
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "email.com"
@@ -15,8 +19,7 @@ ssh-keygen -t rsa -b 4096 -C "email.com"
 - `b` bits
 - `C` comment
 
-
-## prints out if the agent is running
+## prints out if the ssh-agent is running
 
 ```bash
 eval "$(ssh-agent -s)"
@@ -26,4 +29,10 @@ eval "$(ssh-agent -s)"
 
 ```bash
 ssh-add -K ~/.ssh/id_rsa
+```
+
+## test if github will authenticate with your ssh key
+
+```bash
+ssh -T git@github.com
 ```
