@@ -20,8 +20,5 @@ npm install
 ## start app locally
 
 ```bash
-nodemon ./src/server.js -e js,hbs
+npm run dev
 ```
-
-
-- `e` extensions to monitor
