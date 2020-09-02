@@ -24,7 +24,7 @@ weatherForm.addEventListener('submit', (event) => {
             } else {
                 console.log(data)
                 messageOne.textContent = `You Searched: ${search.value}`
-                messageTwo.textContent = `In ${data.location} ${data.descMessage}`
+                messageTwo.textContent = `In ${data.location} the humidity is ${data.humidity}.  ${data.descMessage}`
             }
 
         })

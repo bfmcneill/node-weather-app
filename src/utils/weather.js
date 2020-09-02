@@ -13,8 +13,13 @@ const weather = (lat, long, callback) => {
         }
     }).then(response => {
         if (response.data.current) {
-            const { temperature, feelslike: feelsLike, weather_descriptions: description } = response.data.current
-            callback(undefined, { temperature, feelsLike, description })
+            const {
+                temperature,
+                feelslike: feelsLike,
+                weather_descriptions: description,
+                humidity,
+                observation_time } = response.data.current
+            callback(undefined, { temperature, feelsLike, description, humidity, observation_time })
         } else {
             const error = response.data.error
             const errorMessage = `ERROR :: CODE=${error.code} TYPE=${error.type} INFO=${error.info}`

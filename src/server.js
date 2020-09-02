@@ -54,13 +54,13 @@ app.get('/weather', (req, res) => {
         if (error) {
             return res.send({ error })
         }
-        weather(lat, long, (error, { description, temperature, feelsLike }) => {
+        weather(lat, long, (error, { temperature, feelsLike, description, humidity, observation_time }) => {
             if (error) {
                 return res.send({ error })
             }
             // console.log(location)
-            const descMessage = `It's currently ${description[0]}, ${temperature} °F but it feels like ${feelsLike} °F`
-            res.send({ location, temperature, feelsLike, description: description[0], descMessage })
+            const descMessage = `As of ${observation_time} ${description[0]}, ${temperature} °F but it feels like ${feelsLike} °F`
+            res.send({ location, temperature, feelsLike, humidity, description: description[0], descMessage })
         })
     })
 })
