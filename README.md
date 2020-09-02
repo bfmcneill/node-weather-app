@@ -8,9 +8,6 @@
 npm install
 ```
 
-- `e` extensions to monitor
-
-
 ## sign up for mapbox.com account
 
 - place your api key in `.env` in the layout of `.env.template`
@@ -24,3 +21,6 @@ npm install
 ```bash
 nodemon ./src/server.js -e js,hbs
 ```
+
+
+- `e` extensions to monitor
