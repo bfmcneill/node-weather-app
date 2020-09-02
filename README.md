@@ -5,6 +5,7 @@
 ## how to start the app locally
 
 ```javascript
+npm install
 nodemon ./src/server.js -e js,hbs
 ```
 
