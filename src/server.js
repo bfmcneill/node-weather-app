@@ -9,12 +9,14 @@ const geocode = require('./utils/geocode')
 const weather = require('./utils/weather')
 
 const app = express()
+const PORT = process.env.PORT || 3000
 
 // define paths for express config
 const rootPath = path.join(__dirname, '../')
 const publicPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
+
 
 
 //Setup handlebars engine and views location
@@ -96,7 +98,6 @@ app.get('*', (req, res) => {
     })
 })
 
-const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Server is up on port ${PORT}`)
 })
